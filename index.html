@@ -3,388 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chalunkal AI - Enterprise AI Automation</title>
-    <meta name="description" content="Transform your business with intelligent AI automation. Custom chatbots, lead capture, appointment scheduling, and workflow automation for growing enterprises.">
-    <link rel="stylesheet" href="styles.css">
+    <title>CAI Automation - AI Solutions for Local Businesses</title>
+    <meta name="description" content="Transform your business with AI automation. Custom AI voice agents, workflow automation, and lead generation systems for dental, real estate, insurance, legal, and HVAC businesses.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            color: white;
+        }
+        .hero-content { max-width: 800px; }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        .section {
+            background: white;
+            padding: 5rem 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #667eea;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .industries {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .industry-tag {
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 500;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: #5568d3;
+        }
+        .footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .tagline { font-size: 1.2rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="logo">Chalunkal<span class="highlight">AI</span></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link cta-button">Get Started</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title fade-in">Transform Your Business with <span class="highlight">Intelligent Automation</span></h1>
-                <p class="hero-subtitle fade-in-delay-1">Enterprise-grade AI solutions that work 24/7, capture leads, and automate workflows — so you can focus on growth.</p>
-                <div class="hero-cta fade-in-delay-2">
-                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
-                    <a href="#case-studies" class="btn btn-secondary">View Case Studies</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-visual">
-            <div class="floating-card card-1"></div>
-            <div class="floating-card card-2"></div>
-            <div class="floating-card card-3"></div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Business with AI Automation</h1>
+            <p class="tagline">Custom AI voice agents, workflow automation, and lead generation systems that work 24/7</p>
+            <a href="#contact" class="cta-button">Get Your Free Consultation</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">AI Solutions That Drive Results</h2>
-            <p class="section-subtitle">Custom-built automation infrastructure designed for modern enterprises</p>
-            
-            <div class="services-grid">
+            <h2>Our Services</h2>
+            <div class="services">
                 <div class="service-card">
-                    <div class="service-icon">💬</div>
-                    <h3>AI Chatbots</h3>
-                    <p>Intelligent conversational agents that understand context, answer questions, and qualify leads 24/7. Seamlessly integrated into your website and messaging platforms.</p>
-                    <ul class="service-features">
-                        <li>Natural language understanding</li>
-                        <li>Multi-platform deployment</li>
-                        <li>Custom training on your data</li>
-                        <li>Real-time analytics</li>
-                    </ul>
+                    <h3>🎯 AI Voice Agents</h3>
+                    <p>Automated phone systems that handle appointment scheduling, customer inquiries, and follow-ups. Never miss a lead again.</p>
+                    <p style="margin-top: 1rem; color: #667eea; font-weight: 600;">$500-2,000/month</p>
                 </div>
-
                 <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Lead Automation</h3>
-                    <p>Capture, qualify, and route leads automatically. Never miss an opportunity with intelligent lead scoring and instant follow-up systems.</p>
-                    <ul class="service-features">
-                        <li>Automated lead capture</li>
-                        <li>Smart qualification scoring</li>
-                        <li>CRM integration</li>
-                        <li>Instant notifications</li>
-                    </ul>
+                    <h3>🚀 Lead Generation Automation</h3>
+                    <p>AI-powered systems that qualify leads, nurture prospects, and book appointments automatically while you focus on closing deals.</p>
+                    <p style="margin-top: 1rem; color: #667eea; font-weight: 600;">Custom Pricing</p>
                 </div>
-
                 <div class="service-card">
-                    <div class="service-icon">📅</div>
-                    <h3>Appointment Scheduling</h3>
-                    <p>Eliminate scheduling friction. AI-powered booking that handles timezone coordination, reminders, and rescheduling automatically.</p>
-                    <ul class="service-features">
-                        <li>Calendar synchronization</li>
-                        <li>Automated reminders</li>
-                        <li>No-show reduction</li>
-                        <li>Custom booking rules</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">✉️</div>
-                    <h3>Email Automation</h3>
-                    <p>Personalized email sequences that nurture leads and retain customers. Data-driven campaigns that optimize themselves over time.</p>
-                    <ul class="service-features">
-                        <li>Dynamic personalization</li>
-                        <li>Behavior-based triggers</li>
-                        <li>A/B testing automation</li>
-                        <li>Performance analytics</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h3>Custom Workflows</h3>
-                    <p>Bespoke automation solutions tailored to your unique business processes. From data entry to complex decision trees.</p>
-                    <ul class="service-features">
-                        <li>Process analysis & mapping</li>
-                        <li>Custom integrations</li>
-                        <li>Scalable architecture</li>
-                        <li>Ongoing optimization</li>
-                    </ul>
-                </div>
-
-                <div class="service-card highlight-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>Enterprise Package</h3>
-                    <p>Full-stack AI transformation. Comprehensive automation across all touchpoints with dedicated support and continuous improvement.</p>
-                    <ul class="service-features">
-                        <li>Complete automation suite</li>
-                        <li>Dedicated account manager</li>
-                        <li>Priority support</li>
-                        <li>Monthly optimization</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pricing-info">
-                <h3>Investment</h3>
-                <p>Setup & Implementation: <strong>Starting at $2,500</strong></p>
-                <p>Ongoing Support & Optimization: <strong>Starting at $500/month</strong></p>
-                <a href="#contact" class="btn btn-primary">Get Custom Quote</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section id="case-studies" class="case-studies">
-        <div class="container">
-            <h2 class="section-title">Proven Results Across Industries</h2>
-            <p class="section-subtitle">Real impact, measurable outcomes</p>
-
-            <div class="case-study">
-                <div class="case-study-header">
-                    <h3>Riverside Dental Practice</h3>
-                    <span class="case-study-tag">Healthcare</span>
-                </div>
-                <div class="case-study-content">
-                    <div class="case-study-challenge">
-                        <h4>Challenge</h4>
-                        <p>A busy 3-dentist practice was losing 20+ potential patients per month due to phone calls going unanswered during business hours. Front desk staff were overwhelmed with appointment scheduling, insurance questions, and patient intake.</p>
-                    </div>
-                    <div class="case-study-solution">
-                        <h4>Solution</h4>
-                        <p>Implemented AI chatbot for 24/7 website inquiries, automated appointment scheduling with calendar integration, and AI-powered phone routing system that handled common questions and captured lead information when staff were busy.</p>
-                    </div>
-                    <div class="case-study-results">
-                        <h4>Results</h4>
-                        <div class="results-grid">
-                            <div class="result-stat">
-                                <span class="stat-number">94%</span>
-                                <span class="stat-label">Lead Capture Rate</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">$42K</span>
-                                <span class="stat-label">Additional Monthly Revenue</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">68%</span>
-                                <span class="stat-label">Reduction in No-Shows</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">15hrs</span>
-                                <span class="stat-label">Staff Time Saved/Week</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="case-study">
-                <div class="case-study-header">
-                    <h3>Apex Realty Group</h3>
-                    <span class="case-study-tag">Real Estate</span>
-                </div>
-                <div class="case-study-content">
-                    <div class="case-study-challenge">
-                        <h4>Challenge</h4>
-                        <p>Real estate team of 12 agents was struggling to follow up with web leads within 5 minutes (industry best practice). Average response time was 4+ hours, resulting in 60% of leads going cold before first contact.</p>
-                    </div>
-                    <div class="case-study-solution">
-                        <h4>Solution</h4>
-                        <p>Built AI lead qualification system that instantly engaged website visitors, captured property preferences, scheduled showings, and routed qualified leads to the right agent based on territory and specialization. Integrated with their existing CRM and email marketing platform.</p>
-                    </div>
-                    <div class="case-study-results">
-                        <h4>Results</h4>
-                        <div class="results-grid">
-                            <div class="result-stat">
-                                <span class="stat-number">< 30sec</span>
-                                <span class="stat-label">Average Response Time</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">3.2x</span>
-                                <span class="stat-label">Lead-to-Showing Conversion</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">156</span>
-                                <span class="stat-label">Additional Showings/Month</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">$380K</span>
-                                <span class="stat-label">Additional Annual Revenue</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="case-study">
-                <div class="case-study-header">
-                    <h3>SecureLife Insurance Partners</h3>
-                    <span class="case-study-tag">Insurance</span>
-                </div>
-                <div class="case-study-content">
-                    <div class="case-study-challenge">
-                        <h4>Challenge</h4>
-                        <p>Independent insurance brokerage needed to scale without hiring additional staff. Agents spent 70% of their time on administrative tasks (quotes, follow-ups, policy renewals) instead of high-value sales conversations.</p>
-                    </div>
-                    <div class="case-study-solution">
-                        <h4>Solution</h4>
-                        <p>Deployed comprehensive automation including AI chatbot for quote requests, automated email nurture sequences for different insurance products, renewal reminders with one-click processing, and custom workflow for claims assistance that reduced agent workload by 60%.</p>
-                    </div>
-                    <div class="case-study-results">
-                        <h4>Results</h4>
-                        <div class="results-grid">
-                            <div class="result-stat">
-                                <span class="stat-number">2.8x</span>
-                                <span class="stat-label">Policies Sold Per Agent</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">88%</span>
-                                <span class="stat-label">Renewal Rate (from 61%)</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">340+</span>
-                                <span class="stat-label">Hours Saved Monthly</span>
-                            </div>
-                            <div class="result-stat">
-                                <span class="stat-number">$620K</span>
-                                <span class="stat-label">Additional Annual Revenue</span>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>⚡ Workflow Automation</h3>
+                    <p>Eliminate repetitive tasks. Automate data entry, document processing, email responses, and administrative work.</p>
+                    <p style="margin-top: 1rem; color: #667eea; font-weight: 600;">$1,000-5,000 setup</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <section class="section" style="background: #f8f9fa;">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Built on AI Infrastructure Expertise</h2>
-                    <p>Chalunkal AI is led by <strong>Alex Chalunkal</strong>, a technology entrepreneur and AI infrastructure expert with deep experience in datacenter operations, cloud computing, and enterprise-scale AI deployment.</p>
+            <h2>Industries We Serve</h2>
+            <div class="industries">
+                <span class="industry-tag">🦷 Dental Practices</span>
+                <span class="industry-tag">🏠 Real Estate</span>
+                <span class="industry-tag">🛡️ Insurance Agencies</span>
+                <span class="industry-tag">⚖️ Law Firms</span>
+                <span class="industry-tag">❄️ HVAC Companies</span>
+                <span class="industry-tag">💼 Professional Services</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2>Get Your Free Consultation</h2>
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    ✅ Thank you! We'll contact you within 24 hours.
+                </div>
+                <form id="contactForm" action="https://formsubmit.co/alexmathewc@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New AI Automation Lead">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://alexchalu.github.io/cai-automation/#success">
                     
-                    <p>Having worked at the intersection of infrastructure and artificial intelligence, Alex recognized a critical gap: while large enterprises were deploying sophisticated AI systems, small and mid-sized businesses were being left behind — not due to lack of opportunity, but lack of accessible, properly-engineered solutions.</p>
-                    
-                    <p>Chalunkal AI bridges that gap. We bring enterprise-grade AI automation to growing businesses, with the same reliability and performance standards used by billion-dollar companies, but tailored to the scale and budget of organizations ready to modernize.</p>
-
-                    <div class="about-expertise">
-                        <h3>Our Approach</h3>
-                        <ul>
-                            <li><strong>Infrastructure-first thinking:</strong> We build systems that scale, not prototypes that break</li>
-                            <li><strong>Business outcome focus:</strong> Every automation must drive measurable revenue or cost savings</li>
-                            <li><strong>White-glove implementation:</strong> We handle the complexity so you don't have to</li>
-                            <li><strong>Continuous optimization:</strong> AI systems improve over time with our ongoing support</li>
-                        </ul>
-                    </div>
-
-                    <div class="about-tech">
-                        <h3>Technology Stack</h3>
-                        <p>We leverage cutting-edge AI models, robust cloud infrastructure, and battle-tested integration frameworks to deliver solutions that are:</p>
-                        <ul>
-                            <li>Reliable (99.9%+ uptime)</li>
-                            <li>Secure (enterprise-grade encryption and compliance)</li>
-                            <li>Scalable (grows with your business)</li>
-                            <li>Maintainable (clear documentation and support)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Ready to Transform Your Business?</h2>
-            <p class="section-subtitle">Schedule a free consultation to discuss your automation needs</p>
-
-            <form action="https://formsubmit.co/alexmathewc@gmail.com" method="POST" class="contact-form">
-                <input type="hidden" name="_subject" value="New Chalunkal AI Inquiry">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                
-                <div class="form-row">
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
+                        <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-                    <div class="form-group">
-                        <label for="company">Company *</label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                </div>
-
-                <div class="form-row">
+                    
                     <div class="form-group">
                         <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="industry">Industry *</label>
-                    <select id="industry" name="industry" required>
-                        <option value="">Select your industry</option>
-                        <option value="Healthcare/Dental">Healthcare/Dental</option>
-                        <option value="Real Estate">Real Estate</option>
-                        <option value="Insurance">Insurance</option>
-                        <option value="Legal">Legal</option>
-                        <option value="Home Services">Home Services (HVAC, Plumbing, etc.)</option>
-                        <option value="Financial Services">Financial Services</option>
-                        <option value="Professional Services">Professional Services</option>
-                        <option value="Retail">Retail</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="services">Services Interested In</label>
-                    <select id="services" name="services">
-                        <option value="">Select primary interest</option>
-                        <option value="AI Chatbots">AI Chatbots</option>
-                        <option value="Lead Automation">Lead Automation</option>
-                        <option value="Appointment Scheduling">Appointment Scheduling</option>
-                        <option value="Email Automation">Email Automation</option>
-                        <option value="Custom Workflows">Custom Workflows</option>
-                        <option value="Enterprise Package">Enterprise Package (Full Suite)</option>
-                        <option value="Not Sure">Not Sure - Need Consultation</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Tell us about your challenges *</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="What business processes are you looking to automate? What challenges are you facing?"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-large">Schedule Consultation</button>
-            </form>
+                    
+                    <div class="form-group">
+                        <label for="business">Business Name</label>
+                        <input type="text" id="business" name="business">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="industry">Industry *</label>
+                        <select id="industry" name="industry" required>
+                            <option value="">Select your industry</option>
+                            <option value="dental">Dental Practice</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="insurance">Insurance</option>
+                            <option value="legal">Law Firm</option>
+                            <option value="hvac">HVAC</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">What challenges are you facing?</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Request Free Consultation</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="logo">Chalunkal<span class="highlight">AI</span></span>
-                    <p>Enterprise AI Automation</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#services">Services</a>
-                    <a href="#case-studies">Case Studies</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Chalunkal AI. All rights reserved.</p>
-            </div>
-        </div>
+        <p>&copy; 2026 CAI Automation. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.8;">Powered by advanced AI technology</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Show success message if redirected after form submission
+        if (window.location.hash === '#success') {
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('contactForm').reset();
+            // Store lead in localStorage as backup
+            const lead = {
+                timestamp: new Date().toISOString(),
+                source: 'cai-automation'
+            };
+            const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+            leads.push(lead);
+            localStorage.setItem('leads', JSON.stringify(leads));
+        }
+
+        // Smooth scroll for CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Form submission backup to localStorage
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const formData = new FormData(this);
+            const lead = {
+                timestamp: new Date().toISOString(),
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                business: formData.get('business'),
+                industry: formData.get('industry'),
+                message: formData.get('message')
+            };
+            const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+            leads.push(lead);
+            localStorage.setItem('leads', JSON.stringify(leads));
+        });
+    </script>
 </body>
 </html>
